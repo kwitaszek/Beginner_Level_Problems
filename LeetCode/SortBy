@@ -1,0 +1,20 @@
+/**
+ * @param {Array} arr
+ * @param {Function} fn
+ * @return {Array}
+ */
+var sortBy = function(arr, fn) {
+    
+  return arr.sort((a, b) => {
+    const valueA = fn(a);
+    const valueB = fn(b);
+
+    if (valueA < valueB) {
+      return -1;
+    } else if (valueA > valueB) {
+      return 1;
+    } else {
+      return 0;
+    }
+  });
+};
